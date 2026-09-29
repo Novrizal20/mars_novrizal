@@ -11,6 +11,7 @@ import com.example.mars_novrizal.databinding.ActivityFourthBinding
 import com.example.mars_novrizal.databinding.ActivityMainBinding
 import com.example.mars_novrizal.databinding.ActivityThirdBinding
 import com.example.mars_novrizal.pertemuan_4.FourthActivity
+import com.example.mars_novrizal.pertemuan_5.FifthActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -32,6 +33,18 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("name", "Politeknik Caltex Riau")
             intent.putExtra("from", "Rumbai")
             intent.putExtra("age", 22)
+            startActivity(intent)
+        }
+        binding.btnToFifth.setOnClickListener {
+            val intent = Intent(this, FifthActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnToThird.setOnClickListener {
+            val intent = Intent(this, FifthActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnToSecond.setOnClickListener {
+            val intent = Intent(this, FifthActivity::class.java)
             startActivity(intent)
         }
     }
