@@ -1,5 +1,6 @@
 package com.example.mars_novrizal
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -36,8 +37,15 @@ class SplashScreenActivity : AppCompatActivity() {
         }
 
         lifecycleScope.launch {
-            delay(2000)
-            val intent = Intent(this@SplashScreenActivity, AuthActivity::class.java)
+            delay(2000) //simulasi pengambilan data selama 2 detik
+
+            val sharedPref = getSharedPreferences("user_pref", Context.MODE_PRIVATE)
+            val isLogin = sharedPref.getBoolean("isLogin", false)
+            val intent = if (isLogin) {
+                Intent(this@SplashScreenActivity, BaseActivity::class.java)
+            } else {
+                Intent(this@SplashScreenActivity, AuthActivity::class.java)
+            }
             startActivity(intent)
             finish()
         }

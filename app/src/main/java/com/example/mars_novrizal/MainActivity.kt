@@ -8,11 +8,12 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.mars_novrizal.databinding.ActivityFourthBinding
 import com.example.mars_novrizal.databinding.ActivityMainBinding
-import com.example.mars_novrizal.databinding.ActivityThirdBinding
-import com.example.mars_novrizal.pertemuan_4.FourthActivity
-import com.example.mars_novrizal.pertemuan_5.FifthActivity
+import com.example.mars_novrizal.Home.pertemuan_2.SecondActivity
+import com.example.mars_novrizal.Home.pertemuan_3.ThirdActivity
+import com.example.mars_novrizal.Home.pertemuan_4.FourthActivity
+import com.example.mars_novrizal.Home.pertemuan_5.FifthActivity
+import com.example.mars_novrizal.Home.pertemuan_6.SixthActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -41,11 +42,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.btnToThird.setOnClickListener {
-            val intent = Intent(this, FifthActivity::class.java)
+            val intent = Intent(this, ThirdActivity::class.java)
             startActivity(intent)
         }
         binding.btnToSecond.setOnClickListener {
-            val intent = Intent(this, FifthActivity::class.java)
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToSixth.setOnClickListener {
+            val intent = Intent(this, SixthActivity::class.java)
             startActivity(intent)
         }
         // Fitur Logout

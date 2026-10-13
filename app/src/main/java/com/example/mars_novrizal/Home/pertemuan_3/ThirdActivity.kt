@@ -1,4 +1,4 @@
-package com.example.mars_novrizal.pertemuan_3
+package com.example.mars_novrizal.Home.pertemuan_3
 
 import android.os.Bundle
 import android.util.Log

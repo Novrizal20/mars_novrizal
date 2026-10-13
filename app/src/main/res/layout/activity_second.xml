@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pertemuan_2.SecondActivity">
+    tools:context=".Home.pertemuan_2.SecondActivity">
 
     <TextView
         android:id="@+id/textnama"
@@ -47,10 +47,13 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="#673AB7"
+        app:title="Pertemuan 2"
         app:titleTextColor="@android:color/white"
-        app:subtitleTextColor="@android:color/white" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
