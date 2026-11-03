@@ -15,7 +15,7 @@ import com.example.mars_novrizal.Home.pertemuan_3.ThirdActivity
 import com.example.mars_novrizal.Home.pertemuan_4.FourthActivity
 import com.example.mars_novrizal.Home.pertemuan_5.FifthActivity
 import com.example.mars_novrizal.Home.pertemuan_6.SixthActivity
-import com.example.mars_novrizal.R
+import com.example.mars_novrizal.Home.pertemuan_10.TenthActivity
 import com.example.mars_novrizal.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -58,6 +58,11 @@ class HomeFragment : Fragment() {
 
         binding.btnToSixth.setOnClickListener {
             val intent = Intent(requireContext(), SixthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToNinth.setOnClickListener {
+            val intent = Intent(requireContext(), TenthActivity::class.java)
             startActivity(intent)
         }
         // Fitur Logout

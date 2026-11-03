@@ -19,8 +19,8 @@ class SplashScreenActivity : AppCompatActivity() {
         val isLogin = sharedPref.getBoolean("isLogin", false)
 
         if (isLogin) {
-            // Jika SUDAH login: Langsung ke MainActivity tanpa render layout splash
-            val intent = Intent(this, MainActivity::class.java)
+            // Jika SUDAH login: Langsung ke BaseActivity tanpa render layout splash
+            val intent = Intent(this, BaseActivity::class.java)
             startActivity(intent)
             finish()
             return // Stop eksekusi onCreate agar setContentView tidak dipanggil
