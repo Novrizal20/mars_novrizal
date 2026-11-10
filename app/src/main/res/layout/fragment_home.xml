@@ -107,7 +107,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnToFifth" />
 
     <Button
-        android:id="@+id/btnToNinth"
+        android:id="@+id/btnToTenth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -118,6 +118,17 @@
         app:layout_constraintTop_toBottomOf="@+id/btnToSixth" />
 
     <Button
+        android:id="@+id/btnToEleventh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#009688"
+        android:text="pertemuan_11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnToTenth" />
+
+    <Button
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -125,6 +136,6 @@
         android:text="Logout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnToNinth" />
+        app:layout_constraintTop_toBottomOf="@+id/btnToEleventh" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
