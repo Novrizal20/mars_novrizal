@@ -50,7 +50,7 @@ class EleventhActivity : AppCompatActivity() {
                 0 -> {
                     tab.text = "Tab A"
                     //Tambah Icon
-                    tab.icon = ContextCompat.getDrawable(  this, R.drawable.ic_home)
+                    tab.icon = ContextCompat.getDrawable(this, R.drawable.ic_home)
                     //Tambah Badge Tanpa nomor (hanya titik)
                     val badge = tab.getOrCreateBadge()
                     badge.isVisible = true
@@ -58,11 +58,15 @@ class EleventhActivity : AppCompatActivity() {
                 1 -> {
                     tab.text = "Tab B"
                     //Tambah Icon
-                    tab.icon = ContextCompat.getDrawable(  this, R.drawable.ic_home)
+                    tab.icon = ContextCompat.getDrawable(this, R.drawable.ic_home)
                     //Tambah Badge dengan nomor
                     val badge = tab.getOrCreateBadge()
                     badge.isVisible = true
                     badge.number = 5
+                }
+                2 -> {
+                    tab.text = "Tab C"
+                    tab.icon = ContextCompat.getDrawable(this, R.drawable.ic_home)
                 }
             }
         }.attach()
