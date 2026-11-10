@@ -1,5 +1,6 @@
 package com.example.mars_novrizal.Home.pertemuan_11
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -35,6 +36,7 @@ class ProductAdapter(
                 onItemClick(item)
             }
         }
+        Log.e("RV-TEST", item.name)
     }
 
     override fun getItemCount(): Int = productList.size
