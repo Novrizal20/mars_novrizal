@@ -67,86 +67,97 @@
 
             <Button
                 android:id="@+id/btnToSecond"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="6dp"
                 android:backgroundTint="#EF0327"
                 android:text="pertemuan_2"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnToThird"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
 
             <Button
                 android:id="@+id/btnToThird"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="24dp"
                 android:backgroundTint="#673AB7"
                 android:text="pertemuan_3"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnToSecond"
+                app:layout_constraintTop_toTopOf="@+id/btnToSecond" />
+
+            <Button
+                android:id="@+id/btnToFourth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="#F7D3E60F"
+                android:text="pertemuan_4"
+                app:layout_constraintEnd_toStartOf="@+id/btnToFifth"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnToSecond" />
 
             <Button
-                android:id="@+id/btnToFourth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="#F7D3E60F"
-                android:text="pertemuan_4"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnToThird" />
-
-            <Button
                 android:id="@+id/btnToFifth"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="24dp"
                 android:backgroundTint="#09DC48"
                 android:text="pertemuan_5"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnToFourth"
+                app:layout_constraintTop_toTopOf="@+id/btnToFourth" />
+
+            <Button
+                android:id="@+id/btnToSixth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="#A50945DC"
+                android:text="pertemuan_6"
+                app:layout_constraintEnd_toStartOf="@+id/btnToTenth"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnToFourth" />
 
             <Button
-                android:id="@+id/btnToSixth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="#A50945DC"
-                android:text="pertemuan_6"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnToFifth" />
-
-            <Button
                 android:id="@+id/btnToTenth"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="24dp"
                 android:backgroundTint="#FF5722"
                 android:text="pertemuan_10"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnToSixth" />
+                app:layout_constraintStart_toEndOf="@+id/btnToSixth"
+                app:layout_constraintTop_toTopOf="@+id/btnToSixth" />
 
             <Button
                 android:id="@+id/btnToEleventh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="24dp"
                 android:backgroundTint="#009688"
                 android:text="pertemuan_11"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.088"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnToTenth" />
+                app:layout_constraintTop_toBottomOf="@+id/btnToSixth" />
 
             <Button
                 android:id="@+id/btnLogout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:backgroundTint="#7E57C2"
                 android:text="Logout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -177,6 +188,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvCatFact" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/btnRefresh" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
