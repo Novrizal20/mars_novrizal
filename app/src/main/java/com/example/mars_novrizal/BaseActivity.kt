@@ -11,6 +11,7 @@ import androidx.viewbinding.ViewBinding
 import com.example.mars_novrizal.Home.HomeFragment
 import com.example.mars_novrizal.Message.MessageFragment
 import com.example.mars_novrizal.More.MoreFragment
+import com.example.mars_novrizal.Note.NoteFragment
 import com.example.mars_novrizal.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
@@ -40,6 +41,10 @@ class BaseActivity : AppCompatActivity() {
                 }
                 R.id.more -> {
                     replaceFragment(MoreFragment())
+                    true
+                }
+                R.id.note -> {
+                    replaceFragment(NoteFragment())
                     true
                 }
                 else ->false

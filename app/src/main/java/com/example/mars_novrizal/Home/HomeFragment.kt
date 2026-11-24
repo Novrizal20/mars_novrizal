@@ -118,10 +118,10 @@ class HomeFragment : Fragment() {
             try {
                 val response = CatFactApiClient.apiService.getCatFact()
                 Log.e("RESPONSE", response.toString())
-                binding.tvCatFact.text = "\"${response.fact}\""
+                _binding?.tvCatFact?.text = "\"${response.fact}\""
             } catch (e: Exception) {
                 Log.e("RESPONSE", "Error fetching cat fact", e)
-                binding.tvCatFact.text = "Gagal mengambil fakta kucing."
+                _binding?.tvCatFact?.text = "Gagal mengambil fakta kucing."
             }
         }
     }
@@ -130,19 +130,15 @@ class HomeFragment : Fragment() {
             try {
                 val photos = PhotoApiClient.apiService.getPhotos()
                 val adapter = PhotoAdapter(photos)
-                binding.rvGallery.adapter = adapter
+                _binding?.rvGallery?.adapter = adapter
 
                 /** List Tampil Vertical*/
-                binding.rvGallery.layoutManager = LinearLayoutManager(requireContext())
-
-                /** List Tampil Horizontal */
-                //binding.rvGallery.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-
-                /** List Tampil Grid */
-                //binding.rvGallery.layoutManager = GridLayoutManager(requireContext(),2)
+                _binding?.rvGallery?.layoutManager = LinearLayoutManager(requireContext())
 
             } catch (e: Exception) {
-                Toast.makeText(requireContext(), "Gagal memuat gambar", Toast.LENGTH_SHORT).show()
+                if (_binding != null && isAdded) {
+                    Toast.makeText(requireContext(), "Gagal memuat gambar", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }
